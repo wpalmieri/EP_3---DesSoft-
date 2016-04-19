@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
+from tkinter import *
 
 class Board:
     
@@ -47,8 +48,19 @@ class Board:
         self.label_status.configure(text = "Vez do jogador: X")
         self.label_status.grid(row = 3, column = 0, columnspan = 3)
         
+        
+        menu = Menu(self.window)
+        self.window.config(menu=menu)
+        
+        file = Menu(menu)
+        file.add_command(label = "Exit", command = self. client_exit)
+        menu.add_cascade(label="File", menu = file)
+        
     def iniciar(self):
         self.window.mainloop()
+        
+    def client_exit(self):
+        exit()
         
 jdv = Board()
 jdv.iniciar()

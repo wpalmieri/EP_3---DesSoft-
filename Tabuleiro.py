@@ -55,7 +55,7 @@ class Board:
         self.button9.configure(command=self.button9_clicado)
         
         self.label_status = tk.Label()
-        self.label_status.configure(text = "Próxima Jogada: X")
+        self.label_status.configure(text = " ")
         self.label_status.grid(row = 3, column = 0)
         
         menu = Menu(self.window)

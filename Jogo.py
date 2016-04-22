@@ -20,124 +20,97 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
+                button1["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button1["text"] = "O"
                 matriz[0][0] = 2
-            
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
             
   
         def button2_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button2["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button2["text"] = "O"
                 matriz[0][0] = 2
-                
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
         
         
         def button3_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button3["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button3["text"] = "O"
                 matriz[0][0] = 2
-                
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
 
 
         def button4_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button4["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button["text"] = "O"
                 matriz[0][0] = 2
-                
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
 
 
         def button5_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button5["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button5["text"] = "O"
                 matriz[0][0] = 2
-        
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
 
      
         def button6_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button6["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button6["text"] = "O"
                 matriz[0][0] = 2
-        
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
         
                
         def button7_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button7["text"] = "X"
                 matriz[0][0] = 1
             else:
-                matriz[0][0] = 2
-        
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
+                button7["text"] = "O"
+                matriz[0][0] = 2        
      
      
         def button8_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button8["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button8["text"] = "O"
                 matriz[0][0] = 2
-        
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
-        
+                
         
         def button9_clicado (self):
             
             contador += 1
             if contador % 2 == "0":
+                button9["text"] = "X"
                 matriz[0][0] = 1
             else:
+                button9["text"] = "O"
                 matriz[0][0] = 2
-        
-            self.button1.configure(text = self.jogo.jogada, state = "disabled") # jogo.jogada vai ser imporado do Jogo()
-            # receber a jogada
-            self.label_status.configure("Vez do jogador: X") # mudar
-            # checar se acabou o jogo
         

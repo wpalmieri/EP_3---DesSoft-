@@ -20,10 +20,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button1["text"] = "X"
+                button1[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button1["text"] = "O"
+                button1[" "] = "O"
                 matriz[0][0] = 2
             
   
@@ -31,10 +31,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button2["text"] = "X"
+                button2[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button2["text"] = "O"
+                button2[" "] = "O"
                 matriz[0][0] = 2
         
         
@@ -42,10 +42,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button3["text"] = "X"
+                button3[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button3["text"] = "O"
+                button3[" "] = "O"
                 matriz[0][0] = 2
 
 
@@ -53,10 +53,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button4["text"] = "X"
+                button4[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button["text"] = "O"
+                button[" "] = "O"
                 matriz[0][0] = 2
 
 
@@ -64,10 +64,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button5["text"] = "X"
+                button5[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button5["text"] = "O"
+                button5[" "] = "O"
                 matriz[0][0] = 2
 
      
@@ -75,10 +75,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button6["text"] = "X"
+                button6[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button6["text"] = "O"
+                button6[" "] = "O"
                 matriz[0][0] = 2
         
                
@@ -86,10 +86,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button7["text"] = "X"
+                button7[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button7["text"] = "O"
+                button7[" "] = "O"
                 matriz[0][0] = 2        
      
      
@@ -97,10 +97,10 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button8["text"] = "X"
+                button8[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button8["text"] = "O"
+                button8[" "] = "O"
                 matriz[0][0] = 2
                 
         
@@ -108,9 +108,9 @@ class Jogo:
             
             contador += 1
             if contador % 2 == "0":
-                button9["text"] = "X"
+                button9[" "] = "X"
                 matriz[0][0] = 1
             else:
-                button9["text"] = "O"
+                button9[" "] = "O"
                 matriz[0][0] = 2
         

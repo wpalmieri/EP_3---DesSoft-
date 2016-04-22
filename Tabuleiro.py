@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
+from tkinter import *
 
 class Board:
     
@@ -46,6 +47,13 @@ class Board:
         self.label_status = tk.Label()
         self.label_status.configure(text = "Próxima Jogada: X")
         self.label_status.grid(row = 3, column = 0)
+        
+        menu = Menu(self.window)
+        self.window.config(menu=menu)
+        
+        file = Menu(menu)
+        file.add_command(label = "Exit", command = self. client_exit)
+        menu.add_cascade(label="File", menu = file)
         
     # fazer o button.configure(command) para os botões
     
@@ -115,6 +123,9 @@ class Board:
     
     def iniciar(self):
         self.window.mainloop()
+        
+    def client_exit(self):
+        exit()
         
         
 jdv = Board()

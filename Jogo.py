@@ -6,16 +6,19 @@ class Jogo:
     
     def __init__(self):
         self.matriz = np.zeros([3, 3])
-        self.jogadores = ["O", "X"]
         self.contador = 0              
         
         
-    def muda_button (self):
+    def muda_button (self, i, j):
         if self.contador % 2 == 0:
             self.contador += 1
+            self.matriz[i][j] = 1
+            print (self.matriz)
             return "X"
         else:
             self.contador += 1
+            self.matriz[i][j] = 2
+            print (self.matriz)
             return "O"
     
     def recebe_jogada (self, i, j):
@@ -25,13 +28,12 @@ class Jogo:
         if ganhador == -1:
             if self.contador %2 == 0:
                 self.matriz[i][j] = 1
-                self.jogador = "O"
                 ganhador = self.verifica_ganhador()
-                
+                print (self.matriz)
             else:
                 self.matriz[i][j] = 2
-                self.jogador = "X"
                 ganhador = self.verifica_ganhador()
+                print (self.matriz)
             
             
                 

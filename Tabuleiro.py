@@ -9,6 +9,7 @@ class Board:
         self.window = tk.Tk()
         self.window.geometry("300x320+100+100")
         self.window.title("Jogo da Velha!")
+        self.jogo = Jogo.Jogo()
         
         self.window.rowconfigure(0, minsize = 100)
         self.window.rowconfigure(1, minsize = 100)
@@ -17,9 +18,6 @@ class Board:
         self.window.columnconfigure(0, minsize = 100)
         self.window.columnconfigure(1, minsize = 100)
         self.window.columnconfigure(2, minsize = 100)
-        
-        self.contador=0
-        
         
         
         self.button1 = tk.Button(self.window, text = " ", height = 5, width = 10)
@@ -59,7 +57,7 @@ class Board:
         self.button9.configure(command=self.button9_clicado)
         
         self.label_status = tk.Label()
-        self.label_status.configure(text = " ")
+        self.label_status.configure(text = "Vez do jogador: X")
         self.label_status.grid(row = 3, column = 0)
         
         menu = Menu(self.window)
@@ -76,65 +74,74 @@ class Board:
         
     def button1_clicado(self):
         
-        self .button1.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (0,0)
+        self .button1.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada(0,0)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
         
   
     def button2_clicado(self):
         
-        self.button2.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (0,1)
+        self.button2.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (0,1)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
     
     
     def button3_clicado(self):
         
-        self.button3.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (0,2)
+        self.button3.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (0,2)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
 
     def button4_clicado(self):
         
-        self.button4.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (1,0)
+        self.button4.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (1,0)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
 
     def button5_clicado(self):
         
-        self.button5.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (1,1)
+        self.button5.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (1,1)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
  
     def button6_clicado(self):
         
-        self.button6.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (1,2)
+        self.button6.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (1,2)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
     
            
     def button7_clicado(self):
         
-        self.button7.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (2,0)        
+        self.button7.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (2,0)  
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
  
  
     def button8_clicado(self):
         
-        self.button8.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (2,1)
+        self.button8.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (2,1)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
             
     
     def button9_clicado(self):
         
-        self.button9.config(state="disabled")
-        self.contador += 1
-        self.recebe_jogada (2,2)
+        self.button9.config(text = self.jogo.jogador, state = "disabled")
+        self.jogo.recebe_jogada (2,2)
+        self.jogo.verifica_ganhador()
+        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
     def client_exit(self):
         exit()

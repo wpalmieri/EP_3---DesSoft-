@@ -65,6 +65,7 @@ class Board:
         
         file = Menu(menu)
         file.add_command(label = "Exit", command = self. client_exit)
+        file.add_command(label = "Reset", command = self. client_reset)
         menu.add_cascade(label="File", menu = file)
         
 
@@ -75,8 +76,7 @@ class Board:
     def button1_clicado(self):
         
         self .button1.config(state = "disabled")
-        self.button1["text"] = self.jogo.muda_button(0, 0)
-        self.jogo.recebe_jogada(0, 0)
+        self.button1["text"] = self.jogo.recebe_jogada(0, 0)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
         
@@ -84,8 +84,7 @@ class Board:
     def button2_clicado(self):
         
         self.button2.config(state = "disabled")
-        self.button2["text"] = self.jogo.muda_button(0, 1)
-        self.jogo.recebe_jogada (0,1)
+        self.button2["text"] = self.jogo.recebe_jogada(0, 1)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
     
@@ -93,8 +92,7 @@ class Board:
     def button3_clicado(self):
         
         self.button3.config(state = "disabled")
-        self.button3["text"] = self.jogo.muda_button(0, 2)
-        self.jogo.recebe_jogada (0,2)
+        self.button3["text"] = self.jogo.recebe_jogada(0, 2)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
@@ -102,8 +100,7 @@ class Board:
     def button4_clicado(self):
         
         self.button4.config(state = "disabled")
-        self.button4["text"] = self.jogo.muda_button(1, 0)
-        self.jogo.recebe_jogada (1,0)
+        self.button4["text"] = self.jogo.recebe_jogada(1, 0)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
@@ -111,8 +108,7 @@ class Board:
     def button5_clicado(self):
         
         self.button5.config(state = "disabled")
-        self.button5["text"] = self.jogo.muda_button(1, 1)
-        self.jogo.recebe_jogada (1,1)
+        self.button5["text"] = self.jogo.recebe_jogada(1, 1)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
@@ -120,8 +116,7 @@ class Board:
     def button6_clicado(self):
         
         self.button6.config(state = "disabled")
-        self.button6["text"] = self.jogo.muda_button(1, 2)
-        self.jogo.recebe_jogada (1,2)
+        self.button6["text"] = self.jogo.recebe_jogada(1, 2)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
     
@@ -129,8 +124,7 @@ class Board:
     def button7_clicado(self):
         
         self.button7.config(state = "disabled")
-        self.button7["text"] = self.jogo.muda_button(2, 0)
-        self.jogo.recebe_jogada (2,0)  
+        self.button7["text"] = self.jogo.recebe_jogada(2, 0)  
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
  
@@ -138,8 +132,7 @@ class Board:
     def button8_clicado(self):
         
         self.button8.config(state = "disabled")
-        self.button8["text"] = self.jogo.muda_button(2, 1)
-        self.jogo.recebe_jogada (2,1)
+        self.button8["text"] = self.jogo.recebe_jogada(2, 1)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
             
@@ -147,15 +140,15 @@ class Board:
     def button9_clicado(self):
         
         self.button9.config(state = "disabled")
-        self.button9["text"] = self.jogo.muda_button(2, 2)
-        self.jogo.recebe_jogada (2,2)
+        self.button9["text"] = self.jogo.recebe_jogada(2, 2)
         self.jogo.verifica_ganhador()
         self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
 
     def client_exit(self):
         exit()
         
-        
+    def client_reset(self):
+        reset()
         
 jdv = Board()
 jdv.iniciar()

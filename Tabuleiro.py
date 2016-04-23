@@ -18,6 +18,10 @@ class Board:
         self.window.columnconfigure(1, minsize = 100)
         self.window.columnconfigure(2, minsize = 100)
         
+        self.contador=0
+        
+        
+        
         self.button1 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button1.grid(row = 0, column = 0, sticky = "nsew")
         self.button1.configure(command=self.button1_clicado)
@@ -69,8 +73,72 @@ class Board:
     def iniciar(self):
         self.window.mainloop()
         
+        
+    def button1_clicado(self):
+        
+        self .button1.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (0,0)
+        
+  
+    def button2_clicado(self):
+        
+        self.button2.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (0,1)
+    
+    
+    def button3_clicado(self):
+        
+        self.button3.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (0,2)
+
+
+    def button4_clicado(self):
+        
+        self.button4.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (1,0)
+
+
+    def button5_clicado(self):
+        
+        self.button5.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (1,1)
+
+ 
+    def button6_clicado(self):
+        
+        self.button6.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (1,2)
+    
+           
+    def button7_clicado(self):
+        
+        self.button7.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (2,0)        
+ 
+ 
+    def button8_clicado(self):
+        
+        self.button8.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (2,1)
+            
+    
+    def button9_clicado(self):
+        
+        self.button9.config(state="disabled")
+        self.contador += 1
+        self.recebe_jogada (2,2)
+
     def client_exit(self):
         exit()
+        
         
         
 jdv = Board()

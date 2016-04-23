@@ -5,7 +5,7 @@ import numpy as np
 class Jogo:
     
     def __init__(self):
-        self.matriz = np.zeros([2, 2])
+        self.matriz = np.zeros([3, 3])
         self.jogadores = ["X", "O"]
         self.jogador = self.jogadores
                       
@@ -13,6 +13,7 @@ class Jogo:
     def recebe_jogada (self, i, j):
         
         ganhador = self.verifica_ganhador()
+        print(self.matriz)
         
         if ganhador == -1:
             if self.jogador == self.jogadores[0]:

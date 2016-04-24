@@ -42,7 +42,7 @@ class Jogo:
             or self.matriz[0][1] == self.matriz[1][1] == self.matriz[2][1] == 1\
             or self.matriz[0][2] == self.matriz[1][2] == self.matriz[2][2] == 1\
             or self.matriz[0][0] == self.matriz[1][1] == self.matriz[2][2] == 1\
-            or self.matriz[2][2] == self.matriz[1][1] == self.matriz[2][0] == 1:
+            or self.matriz[0][2] == self.matriz[1][1] == self.matriz[2][0] == 1:
                 return 1
                 
         elif self.matriz[0][0] == self.matriz[0][1] == self.matriz[0][2] == 2\
@@ -93,3 +93,4 @@ class Jogo:
         elif self.verifica_ganhador() == 0:
             pass
 
+ 

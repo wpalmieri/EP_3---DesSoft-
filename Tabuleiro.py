@@ -78,6 +78,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button1["text"] = self.jogo.recebe_jogada(0, 0)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
         
   
     def button2_clicado (self):
@@ -86,6 +87,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button2["text"] = self.jogo.recebe_jogada(0, 1)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
     
     
     def button3_clicado(self):
@@ -94,6 +96,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button3["text"] = self.jogo.recebe_jogada(0, 2)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
 
 
     def button4_clicado(self):
@@ -102,6 +105,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button4["text"] = self.jogo.recebe_jogada(1, 0)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
 
 
     def button5_clicado(self):
@@ -110,6 +114,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button5["text"] = self.jogo.recebe_jogada(1, 1)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
  
     def button6_clicado(self):
         
@@ -117,6 +122,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button6["text"] = self.jogo.recebe_jogada(1, 2)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
     
            
     def button7_clicado(self):
@@ -125,6 +131,7 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button7["text"] = self.jogo.recebe_jogada(2, 0)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
  
  
     def button8_clicado(self):
@@ -133,7 +140,8 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button8["text"] = self.jogo.recebe_jogada(2, 1)
         self.label_status.configure(text = self.jogo.troca_jogador())
-            
+        self.desativa_buttons() 
+           
     
     def button9_clicado(self):
         
@@ -141,6 +149,21 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button9["text"] = self.jogo.recebe_jogada(2, 2)
         self.label_status.configure(text = self.jogo.troca_jogador())
+        self.desativa_buttons()
+        
+
+    def desativa_buttons(self):
+        if self.jogo.verifica_ganhador() == 1\
+        or self.jogo.verifica_ganhador() == 2:
+            self.button1.config(state = "disable")
+            self.button2.config(state = "disable")
+            self.button3.config(state = "disable")
+            self.button4.config(state = "disable")
+            self.button5.config(state = "disable")
+            self.button6.config(state = "disable")
+            self.button7.config(state = "disable")
+            self.button8.config(state = "disable")
+            self.button9.config(state = "disable")
 
 
     def client_exit(self):

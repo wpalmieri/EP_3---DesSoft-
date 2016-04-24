@@ -80,7 +80,7 @@ class Board:
         self.label_status.configure(text = self.jogo.troca_jogador())
         
   
-    def button2_clicado(self):
+    def button2_clicado (self):
         
         self.button2.config(state = "disabled")
         self.jogo.verifica_ganhador()
@@ -110,7 +110,6 @@ class Board:
         self.jogo.verifica_ganhador()
         self.button5["text"] = self.jogo.recebe_jogada(1, 1)
         self.label_status.configure(text = self.jogo.troca_jogador())
-
  
     def button6_clicado(self):
         
@@ -152,6 +151,7 @@ class Board:
     def client_reset(self):
         
         self.jogo.limpa_jogadas()
+        self.label_status.configure(text = self.jogo.troca_jogador())
                 
         self.button1.config(state = "active")
         self.button1["text"] = " "

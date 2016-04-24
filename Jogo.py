@@ -15,20 +15,17 @@ class Jogo:
             if self.contador %2 == 0:
                 print ("contador =", self.contador)
                 print (" ")
-                return "Vez do jogador X"
+                return "Vez do jogador  X"
             else:
                 print ("contador =", self.contador)
                 print (" ")
-                return "Vez do jogador O"
+                return "Vez do jogador  O"
         elif self.verifica_ganhador() == 1:
             return "Jogador X ganhou!"
         elif self.verifica_ganhador() == 2:
-            return "Jogador 0 ganhou!"
+            return "Jogador O ganhou!"
         elif self.verifica_ganhador() == 0:
             return "O jogo deu velha!"
-        
-        
-
                 
                 
     def limpa_jogadas (self):
@@ -76,8 +73,6 @@ class Jogo:
         if self.verifica_ganhador() == 1\
             or self.verifica_ganhador == 2:
                 pass
-                ### O que devo fazer aqui? ###
-                ### Aqui deve-se colocar o que acontece quando alguém já ganhou ###
             
         elif self.verifica_ganhador() == -1:
             
@@ -97,5 +92,4 @@ class Jogo:
                 
         elif self.verifica_ganhador() == 0:
             pass
-            ###O que devo fazer aqui???###
-            ### Aqui deve-se colocar o que acontece quando o jogo empatou ###
+

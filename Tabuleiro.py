@@ -11,6 +11,7 @@ class Board:
         self.window.title("Jogo da Velha!")
         self.jogo = Jogo.Jogo()
         
+        # Configurações das linhas e colunas
         self.window.rowconfigure(0, minsize = 100)
         self.window.rowconfigure(1, minsize = 100)
         self.window.rowconfigure(2, minsize = 100)
@@ -22,50 +23,50 @@ class Board:
         
         self.button1 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button1.grid(row = 0, column = 0, sticky = "nsew")
-        self.button1.configure(command=self.button1_clicado)
+        self.button1.configure(command = self.button1_clicado)
         
         self.button2 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button2.grid(row = 0, column = 1, sticky = "nsew")
-        self.button2.configure(command=self.button2_clicado)
+        self.button2.configure(command = self.button2_clicado)
         
         self.button3 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button3.grid(row = 0, column = 2, sticky = "nsew")
-        self.button3.configure(command=self.button3_clicado)
+        self.button3.configure(command = self.button3_clicado)
         
         self.button4 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button4.grid(row = 1, column = 0, sticky = "nsew")
-        self.button4.configure(command=self.button4_clicado)
+        self.button4.configure(command = self.button4_clicado)
         
         self.button5 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button5.grid(row = 1, column = 1, sticky = "nsew")
-        self.button5.configure(command=self.button5_clicado)
+        self.button5.configure(command = self.button5_clicado)
         
         self.button6 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button6.grid(row = 1, column = 2, sticky = "nsew")
-        self.button6.configure(command=self.button6_clicado)
+        self.button6.configure(command = self.button6_clicado)
         
         self.button7 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button7.grid(row = 2, column = 0, sticky = "nsew")
-        self.button7.configure(command=self.button7_clicado)
+        self.button7.configure(command = self.button7_clicado)
         
         self.button8 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button8.grid(row = 2, column = 1, sticky = "nsew")
-        self.button8.configure(command=self.button8_clicado)
+        self.button8.configure(command = self.button8_clicado)
         
         self.button9 = tk.Button(self.window, text = " ", height = 5, width = 10)
         self.button9.grid(row = 2, column = 2, sticky = "nsew")
-        self.button9.configure(command=self.button9_clicado)
+        self.button9.configure(command = self.button9_clicado)
         
         self.label_status = tk.Label()
         self.label_status.configure(text = self.jogo.troca_jogador())
         self.label_status.grid(row = 3, column = 0)
         
         menu = Menu(self.window)
-        self.window.config(menu=menu)
+        self.window.config(menu = menu)
         file = Menu(menu)
         file.add_command(label = "Exit", command = self. client_exit)
         file.add_command(label = "Reset", command = self. client_reset)
-        menu.add_cascade(label="File", menu = file)
+        menu.add_cascade(label = "File", menu = file)
         
 
     def iniciar(self):
@@ -153,8 +154,11 @@ class Board:
         
 
     def desativa_buttons(self):
+        # Para quando o jogo acabar, os botões que ainda estão vazios (caso existam) serem desativados
+        
         if self.jogo.verifica_ganhador() == 1\
         or self.jogo.verifica_ganhador() == 2:
+            
             self.button1.config(state = "disable")
             self.button2.config(state = "disable")
             self.button3.config(state = "disable")
@@ -167,11 +171,11 @@ class Board:
 
 
     def client_exit(self):
-        
         exit()
         
         
     def client_reset(self):
+        # Limpar as jogadas já feitas e mudar os textos dos botões de volta par vazio
         
         self.jogo.limpa_jogadas()
         self.label_status.configure(text = self.jogo.troca_jogador())

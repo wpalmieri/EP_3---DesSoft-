@@ -57,12 +57,11 @@ class Board:
         self.button9.configure(command=self.button9_clicado)
         
         self.label_status = tk.Label()
-        self.label_status.configure(text = "Vez do jogador: X")
+        self.label_status.configure(text = self.jogo.troca_jogador())
         self.label_status.grid(row = 3, column = 0)
         
         menu = Menu(self.window)
         self.window.config(menu=menu)
-        
         file = Menu(menu)
         file.add_command(label = "Exit", command = self. client_exit)
         file.add_command(label = "Reset", command = self. client_reset)
@@ -78,7 +77,7 @@ class Board:
         self.button1.config(state = "disabled")
         self.button1["text"] = self.jogo.recebe_jogada(0, 0)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
         
   
     def button2_clicado(self):
@@ -86,7 +85,7 @@ class Board:
         self.button2.config(state = "disabled")
         self.button2["text"] = self.jogo.recebe_jogada(0, 1)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
     
     
     def button3_clicado(self):
@@ -94,7 +93,7 @@ class Board:
         self.button3.config(state = "disabled")
         self.button3["text"] = self.jogo.recebe_jogada(0, 2)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
 
 
     def button4_clicado(self):
@@ -102,7 +101,7 @@ class Board:
         self.button4.config(state = "disabled")
         self.button4["text"] = self.jogo.recebe_jogada(1, 0)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
 
 
     def button5_clicado(self):
@@ -110,7 +109,7 @@ class Board:
         self.button5.config(state = "disabled")
         self.button5["text"] = self.jogo.recebe_jogada(1, 1)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
 
  
     def button6_clicado(self):
@@ -118,7 +117,7 @@ class Board:
         self.button6.config(state = "disabled")
         self.button6["text"] = self.jogo.recebe_jogada(1, 2)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
     
            
     def button7_clicado(self):
@@ -126,7 +125,7 @@ class Board:
         self.button7.config(state = "disabled")
         self.button7["text"] = self.jogo.recebe_jogada(2, 0)  
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
  
  
     def button8_clicado(self):
@@ -134,7 +133,7 @@ class Board:
         self.button8.config(state = "disabled")
         self.button8["text"] = self.jogo.recebe_jogada(2, 1)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
             
     
     def button9_clicado(self):
@@ -142,14 +141,18 @@ class Board:
         self.button9.config(state = "disabled")
         self.button9["text"] = self.jogo.recebe_jogada(2, 2)
         self.jogo.verifica_ganhador()
-        self.label_status.configure(text = "Vez do jogador: {}".format(self.jogo.jogador))
+        self.label_status.configure(text = self.jogo.troca_jogador())
+
 
     def client_exit(self):
+        
         exit()
         
-    def client_reset(self):
-        self.jogo.limpa_jogadas()
         
+    def client_reset(self):
+        
+        self.jogo.limpa_jogadas()
+                
         self.button1.config(state = "active")
         self.button1["text"] = " "
         

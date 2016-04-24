@@ -22,6 +22,10 @@ class Jogo:
                 print (self.matriz)
                 return "O"
                 
+    def limpa_jogadas (self):
+        self.matriz = np.zeros([3,3])
+                    
+                
     def verifica_ganhador(self):
         a = -1
         return a
